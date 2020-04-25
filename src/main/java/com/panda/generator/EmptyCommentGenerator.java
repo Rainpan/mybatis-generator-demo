@@ -1,5 +1,14 @@
 package com.panda.generator;
 
+import org.mybatis.generator.api.CommentGenerator;
+import org.mybatis.generator.api.IntrospectedColumn;
+import org.mybatis.generator.api.IntrospectedTable;
+import org.mybatis.generator.api.dom.java.*;
+import org.mybatis.generator.api.dom.xml.XmlElement;
+
+import java.util.Properties;
+import java.util.Set;
+
 public class EmptyCommentGenerator implements CommentGenerator {
 
     @Override

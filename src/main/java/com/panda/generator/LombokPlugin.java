@@ -1,5 +1,15 @@
 package com.panda.generator;
 
+import org.apache.commons.lang3.StringUtils;
+import org.mybatis.generator.api.IntrospectedColumn;
+import org.mybatis.generator.api.IntrospectedTable;
+import org.mybatis.generator.api.PluginAdapter;
+import org.mybatis.generator.api.dom.java.*;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
 public class LombokPlugin extends PluginAdapter {
 
     @Override

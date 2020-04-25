@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE generatorConfiguration
-        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
-        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
 
@@ -10,19 +8,13 @@
         <!-- 生成的pojo，将implements Serializable -->
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
 
-        <plugin type="me.mizhoux.mbgcomment.LombokPlugin">
+        <plugin type="com.panda.generator.LombokPlugin">
             <property name="hasLombok" value="true"/>
             <property name="author" value=""/>
         </plugin>
 
-        <!-- 注释 -->
-       <!-- <commentGenerator>
-            <property name="addRemarkComments" value="true"/> &lt;!&ndash; 增加数据库备注 &ndash;&gt;
-            <property name="suppressAllComments" value="false" /> &lt;!&ndash; 是否取消注释 &ndash;&gt;
-            <property name="suppressDate" value="true"/> &lt;!&ndash; 是否生成注释代时间戳 &ndash;&gt;
-        </commentGenerator>-->
         <!-- 自定义注释生成器 -->
-        <commentGenerator type="me.mizhoux.mbgcomment.EmptyCommentGenerator"/>
+        <commentGenerator type="com.panda.generator.EmptyCommentGenerator"/>
 
         <!-- 数据库链接URL、用户名、密码 -->
         <!-- 连接字符串 -->
@@ -57,8 +49,7 @@
         </sqlMapGenerator>
 
         <!-- 对应的Mapper接口类文件 -->
-        <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.sf.panda.mapper" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.sf.panda.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="false" />
             <property name="constructorBased" value="false"/>
         </javaClientGenerator>
